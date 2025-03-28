@@ -1,0 +1,46 @@
+@page
+@model TaskManagerProject.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit Task";
+}
+
+<!-- Page for editing a task　-->
+<h2>Edit Task</h2>
+
+<!-- Form to submit the changes　-->
+<form method="post">
+
+    <!-- Identify the task being modified -->
+    <input type="hidden" asp-for="Task.Id" />
+    
+    <!-- Input task title -->
+    <div style="margin-bottom: 15px;">
+        <label>Title:</label>
+        <input type="text" asp-for="Task.Title" required style="width: 100%;"/>
+    </div>
+
+    <!-- Input task description -->
+    <div style="margin-bottom: 15px;">
+        <label>Description:</label>
+        <textarea asp-for="Task.Description" style="width: 100%; height: 100px;"></textarea>
+    </div>
+
+    <!-- Select task status -->
+    <div style="margin-bottom: 15px;">
+        <label>Status:</label>
+        <select asp-for="Task.IsCompleted">
+            <option value="false">Pending</option>
+            <option value="true">Completed</option>
+        </select>
+    </div>
+
+    <!-- Select task due date and submit the modifications -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <div style="flex-grow: 1;">
+            <label>Due Date:</label>
+            <input type="date" asp-for="Task.DateDue" required style="width: 20%;"/>
+        </div>
+        <button type="submit" class="button">Save</button>
+        <a asp-page="Index" class="button button--grey">Cancel</a>
+    </div>
+</form>

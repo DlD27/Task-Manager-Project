@@ -1,0 +1,120 @@
+/* Font: Platypi */
+@import url('https://fonts.googleapis.com/css2?family=Platypi:wght@400&display=swap');
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: 'Platypi', sans-serif;
+}
+
+/* Button style including hover effect */
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #85c2e1;
+  color: rgb(40, 12, 12);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4f96ba;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.button--grey {
+  background-color: #b9b9b9;
+}
+
+.button--grey:hover {
+  background-color: #888888;
+}
+
+a.button {
+  padding: 0.5rem 1.5rem;
+  background-color: #85c2e1;
+  color: rgb(40, 12, 12);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background-color: #4f96ba;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+a.button--grey {
+  background-color: #b9b9b9;
+}
+
+a.button--grey:hover {
+  background-color: #888888;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Modal style (Delete confirmation message) */
+.modal {
+  position: fixed;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 350px;
+  height: 230px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  font-size: 20px; 
+}
+
+/* Add space between buttons */
+.modal-content button {
+  margin: 10px 0;
+}
